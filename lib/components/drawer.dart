@@ -12,7 +12,7 @@ class MyDrawer extends StatelessWidget {
               child: Container(
                 height: 50,
                 width: 100,
-                child: Image.asset('assets/inpost_Logo.jpg'),
+                child: Image.asset('assets/logo.jpg'),
                 ),
             ),
             ListTile(

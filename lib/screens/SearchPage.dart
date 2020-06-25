@@ -5,15 +5,7 @@ class SearchPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: FlatButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Icon(
-            Icons.keyboard_backspace,
-            color: Colors.grey[900],
-          ),
-        ),
+        iconTheme: IconThemeData(color: Colors.grey[900]),
         title: Text(
           "Szukana fraza",
           style: TextStyle(color: Colors.grey[900]),
