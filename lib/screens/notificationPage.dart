@@ -34,14 +34,15 @@ class _NotificationPageState extends State<NotificationPage> {
             child: Icon(
               myIcon,
               color: Colors.grey[900],
+              size: 35,
             ),
           ),
         ],
       ),
-      body: Scaffold(
-        backgroundColor: Colors.grey[300],
-        body: ListView(
-          padding: const EdgeInsets.all(8),
+      body: Container(
+        color: Colors.grey[300],
+        child: ListView(
+          padding: const EdgeInsets.symmetric(vertical: 8),
           children: <Widget>[
             NotificationCard(),
             NotificationCard(),

@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'InfoPage.dart';
 import 'SearchPage.dart';
 
-
 class DeliveryPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -36,37 +35,50 @@ class DeliveryPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            PackageCard(),
-            //Expanded(child: ,)
+            Container(
+              width: double.infinity,
+              height: 600,
+              color: Colors.grey[300],
+              child: ListView(
+                children: <Widget>[
+                  PackageCard(),
+                  PackageCard(),
+                  PackageCard(),
+                ],
+              ),
+            ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
-                Container(
-                  margin: EdgeInsets.symmetric(vertical: 30),
-                  color: Colors.white,
-                  height: 150,
-                  width: 270,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Text(
-                        'Nie śledzisz jeszcze zadnej przesyłki',
-                        style: TextStyle(fontSize: 20),
+                // Container(
+                //   margin: EdgeInsets.symmetric(vertical: 30),
+                //   color: Colors.white,
+                //   height: 150,
+                //   width: 270,
+                //   child: Column(
+                //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                //     children: <Widget>[
+                //       Text(
+                //         'Nie śledzisz jeszcze zadnej przesyłki',
+                //         style: TextStyle(fontSize: 20),
+                //       ),
+                //       Text('Kliknij plus by dodać przesyłkę'),
+                //     ],
+                //   ),
+                // ),
+                Padding(
+                  padding: const EdgeInsets.all(15.0),
+                  child: FlatButton(
+                    onPressed: () => Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => InfoPage())),
+                    child: Container(
+                      color: Colors.yellow[700],
+                      width: 60,
+                      height: 60,
+                      child: Icon(
+                        Icons.add,
+                        size: 50,
                       ),
-                      Text('Kliknij plus by dodać przesyłkę'),
-                    ],
-                  ),
-                ),
-                FlatButton(
-                  onPressed: ()  => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => InfoPage())),
-                  child: Container(
-                    color: Colors.yellow[700],
-                    width: 60,
-                    height: 60,
-                    child: Icon(
-                      Icons.add,
-                      size: 50,
                     ),
                   ),
                 ),

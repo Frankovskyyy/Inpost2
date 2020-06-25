@@ -7,10 +7,7 @@ class InfoPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('fhfhfdhfgdh', style: TextStyle(color: Colors.grey[900]),),
         backgroundColor: Colors.white,
-        leading: FlatButton(
-          onPressed: () => Navigator.pop(context),
-          child: Icon(Icons.keyboard_backspace),
-        ),
+        iconTheme: IconThemeData(color: Colors.grey[900]),
       ),
       body: Container(
         color: Colors.white,
