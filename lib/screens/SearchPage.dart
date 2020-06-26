@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SearchPage extends StatelessWidget {
   @override
@@ -8,14 +9,14 @@ class SearchPage extends StatelessWidget {
         iconTheme: IconThemeData(color: Colors.grey[900]),
         title: Text(
           "Szukana fraza",
-          style: TextStyle(color: Colors.grey[900]),
+          style: TextStyle(color: Colors.grey[900], fontSize: ScreenUtil().setSp(40, allowFontScalingSelf: true)),
         ),
         backgroundColor: Colors.white,
       ),
       body: Scaffold(
         body: Container(
           color: Colors.white,
-          padding: EdgeInsets.symmetric(horizontal: 20, vertical: 30),
+          padding: EdgeInsets.symmetric(horizontal: 30.w, vertical: 45.h),
           child: TextField(
             obscureText: false,
             decoration: InputDecoration(

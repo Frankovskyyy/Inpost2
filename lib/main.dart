@@ -1,6 +1,7 @@
 import 'package:Inpost2/screens/deliveryPage.dart';
 import 'package:Inpost2/screens/notificationPage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() => runApp(MyApp());
 
@@ -27,7 +28,9 @@ class _MyAppState extends State<MyApp> {
 //pasek nawigacji, znajdują
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(width: 828, height: 1792, allowFontScaling: true);
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.grey,
         body: Center(

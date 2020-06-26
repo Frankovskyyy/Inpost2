@@ -1,6 +1,7 @@
 import 'package:Inpost2/components/drawer.dart';
 import 'package:Inpost2/components/notificationCard.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NotificationPage extends StatefulWidget {
   @override
@@ -17,14 +18,17 @@ class _NotificationPageState extends State<NotificationPage> {
         iconTheme: new IconThemeData(color: Colors.grey[900]),
         title: Text(
           "Centrum powiadomień",
-          style: TextStyle(color: Colors.grey[900]),
+          style: TextStyle(
+              color: Colors.grey[900],
+              fontSize: ScreenUtil().setSp(40, allowFontScalingSelf: true)),
         ),
         backgroundColor: Colors.white,
         actions: <Widget>[
           FlatButton(
             onPressed: () {
               setState(() {
-                if (myIcon == Icons.keyboard_arrow_down) { //Zmienia 
+                if (myIcon == Icons.keyboard_arrow_down) {
+                  //Zmienia
                   myIcon = Icons.keyboard_arrow_up;
                 } else {
                   myIcon = Icons.keyboard_arrow_down;

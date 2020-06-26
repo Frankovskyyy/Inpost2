@@ -1,6 +1,7 @@
 import 'package:Inpost2/components/drawer.dart';
 import 'package:Inpost2/components/packageCard.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'InfoPage.dart';
 import 'SearchPage.dart';
 
@@ -13,7 +14,8 @@ class DeliveryPage extends StatelessWidget {
         iconTheme: new IconThemeData(color: Colors.grey[900]),
         title: Text(
           "Śledzenie przesyłek",
-          style: TextStyle(color: Colors.grey[900]),
+          style: TextStyle(color: Colors.grey[900],
+          fontSize: ScreenUtil().setSp(40, allowFontScalingSelf: true)),
         ),
         backgroundColor: Colors.white,
         actions: <Widget>[
@@ -37,7 +39,7 @@ class DeliveryPage extends StatelessWidget {
           children: <Widget>[
             Container(
               width: double.infinity,
-              height: 600,
+              height: 1200.h,
               color: Colors.grey[300],
               child: ListView(
                 children: <Widget>[
@@ -73,11 +75,11 @@ class DeliveryPage extends StatelessWidget {
                         MaterialPageRoute(builder: (context) => InfoPage())),
                     child: Container(
                       color: Colors.yellow[700],
-                      width: 60,
-                      height: 60,
+                      width: 130.w,
+                      height: 130.h,
                       child: Icon(
                         Icons.add,
-                        size: 50,
+                        size: 110.h,
                       ),
                     ),
                   ),

@@ -1,5 +1,6 @@
 import 'package:Inpost2/screens/InfoPage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../constants.dart';
 
@@ -7,9 +8,9 @@ class NotificationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 180,
+      height: 450.h,
       width: double.infinity,
-      margin: EdgeInsets.only(bottom: 15),
+      margin: EdgeInsets.only(bottom: 25.h),
       padding: EdgeInsets.all(20),
       color: Colors.white,
       child: Column(
@@ -23,7 +24,11 @@ class NotificationCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text('Paczka została umieszczona w Paczkomacie',
-                            style: GreyStyle.copyWith(fontSize: 15), textAlign: TextAlign.left),
+                            style: GreyStyle.copyWith(
+                              fontSize: ScreenUtil()
+                                  .setSp(30, allowFontScalingSelf: true),
+                            ),
+                            textAlign: TextAlign.left),
                       ]),
                   Icon(Icons.notifications_none),
                 ]),
@@ -33,8 +38,13 @@ class NotificationCard extends StatelessWidget {
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text('NADAWCA', style: GreyStyle),
-                        Text('Omna.pl - Smart Technology and Smart Life', style: GreyStyle),
+                        Text('NADAWCA',
+                            style: GreyStyle.copyWith(
+                                fontSize: ScreenUtil()
+                                    .setSp(30, allowFontScalingSelf: true))),
+                        Text('Omna.pl - Smart Technology and Smart Life',
+                            style: GreyStyle.copyWith(fontSize: ScreenUtil()
+                                    .setSp(30, allowFontScalingSelf: true))),
                       ]),
                 ]),
             Row(
@@ -43,7 +53,8 @@ class NotificationCard extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text('śr. | 03.06.20 | 9:39', style: GreyStyle),
+                      Text('śr. | 03.06.20 | 9:39', style: GreyStyle.copyWith(fontSize: ScreenUtil()
+                                    .setSp(30, allowFontScalingSelf: true))),
                     ],
                   ),
                   FlatButton(
@@ -52,7 +63,7 @@ class NotificationCard extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => InfoPage()));
                     },
                     child: Row(children: <Widget>[
-                      Text('więcej'),
+                      Text('więcej', style: TextStyle(fontSize: ScreenUtil().setSp(30, allowFontScalingSelf: true)),),
                       Icon(Icons.arrow_forward, color: Colors.yellow[700]),
                     ]),
                   )
