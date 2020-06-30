@@ -24,8 +24,14 @@ class PackageCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text('NR PRZESYŁKI',
-                            style: GreyStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true)), textAlign: TextAlign.left),
-                        Text('6547360387456803476863', style: BlackBoldStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
+                            style: GreyStyle.copyWith(
+                                fontSize: ScreenUtil()
+                                    .setSp(27, allowFontScalingSelf: true)),
+                            textAlign: TextAlign.left),
+                        Text('75678689567878658756',
+                            style: BlackBoldStyle.copyWith(
+                                fontSize: ScreenUtil()
+                                    .setSp(27, allowFontScalingSelf: true))),
                       ]),
                   Icon(Icons.blur_linear),
                 ]),
@@ -35,14 +41,28 @@ class PackageCard extends StatelessWidget {
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text('STATUS', style: GreyStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
-                        Text('Gotowa do odbioru', style: BlackBoldStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
+                        Text('STATUS',
+                            style: GreyStyle.copyWith(
+                                fontSize: ScreenUtil()
+                                    .setSp(27, allowFontScalingSelf: true))),
+                        Text('Gotowa do odbioru',
+                            style: BlackBoldStyle.copyWith(
+                                fontSize: ScreenUtil()
+                                    .setSp(27, allowFontScalingSelf: true))),
                       ]),
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       children: <Widget>[
-                        Text('CZEKA NA ODBIÓR DO', style: GreyStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
-                        Text('śr. | 03.06.20 | 9:39', style: TextStyle(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true)),),
+                        Text('CZEKA NA ODBIÓR DO',
+                            style: GreyStyle.copyWith(
+                                fontSize: ScreenUtil()
+                                    .setSp(27, allowFontScalingSelf: true))),
+                        Text(
+                          'śr. | 03.06.20 | 9:39',
+                          style: TextStyle(
+                              fontSize: ScreenUtil()
+                                  .setSp(27, allowFontScalingSelf: true)),
+                        ),
                       ])
                 ]),
             Row(
@@ -51,8 +71,14 @@ class PackageCard extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text('NAZWA PRZESYŁKI', style: GreyStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
-                      Text('Parasole', style: BlackBoldStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
+                      Text('NAZWA PRZESYŁKI',
+                          style: GreyStyle.copyWith(
+                              fontSize: ScreenUtil()
+                                  .setSp(27, allowFontScalingSelf: true))),
+                      Text('Buty',
+                          style: BlackBoldStyle.copyWith(
+                              fontSize: ScreenUtil()
+                                  .setSp(27, allowFontScalingSelf: true))),
                     ],
                   ),
                   FlatButton(
@@ -63,7 +89,12 @@ class PackageCard extends StatelessWidget {
                               builder: (context) => DetailsPage()));
                     },
                     child: Row(children: <Widget>[
-                      Text('więcej', style: TextStyle(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true)),),
+                      Text(
+                        'więcej',
+                        style: TextStyle(
+                            fontSize: ScreenUtil()
+                                .setSp(27, allowFontScalingSelf: true)),
+                      ),
                       Icon(Icons.arrow_forward, color: Colors.yellow[700]),
                     ]),
                   )

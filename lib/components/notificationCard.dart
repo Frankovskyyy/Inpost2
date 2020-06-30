@@ -42,8 +42,9 @@ class NotificationCard extends StatelessWidget {
                             style: GreyStyle.copyWith(
                                 fontSize: ScreenUtil()
                                     .setSp(30, allowFontScalingSelf: true))),
-                        Text('Omna.pl - Smart Technology and Smart Life',
-                            style: GreyStyle.copyWith(fontSize: ScreenUtil()
+                        Text('nic.pl - Nowoczesne rozwiązania',
+                            style: GreyStyle.copyWith(
+                                fontSize: ScreenUtil()
                                     .setSp(30, allowFontScalingSelf: true))),
                       ]),
                 ]),
@@ -53,8 +54,10 @@ class NotificationCard extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text('śr. | 03.06.20 | 9:39', style: GreyStyle.copyWith(fontSize: ScreenUtil()
-                                    .setSp(30, allowFontScalingSelf: true))),
+                      Text('śr. | 03.06.20 | 9:39',
+                          style: GreyStyle.copyWith(
+                              fontSize: ScreenUtil()
+                                  .setSp(30, allowFontScalingSelf: true))),
                     ],
                   ),
                   FlatButton(
@@ -63,7 +66,12 @@ class NotificationCard extends StatelessWidget {
                           MaterialPageRoute(builder: (context) => InfoPage()));
                     },
                     child: Row(children: <Widget>[
-                      Text('więcej', style: TextStyle(fontSize: ScreenUtil().setSp(30, allowFontScalingSelf: true)),),
+                      Text(
+                        'więcej',
+                        style: TextStyle(
+                            fontSize: ScreenUtil()
+                                .setSp(30, allowFontScalingSelf: true)),
+                      ),
                       Icon(Icons.arrow_forward, color: Colors.yellow[700]),
                     ]),
                   )

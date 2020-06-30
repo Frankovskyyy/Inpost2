@@ -9,11 +9,17 @@ class DetailsPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        actions: <Widget>[IconButton(icon: Icon(Icons.delete_outline, color: Colors.grey[900]), onPressed: (){})],
+        actions: <Widget>[
+          IconButton(
+              icon: Icon(Icons.delete_outline, color: Colors.grey[900]),
+              onPressed: () {})
+        ],
         iconTheme: IconThemeData(color: Colors.grey[900]),
         backgroundColor: Colors.white,
         title: Text('Szczegóły przesyłki',
-            style: TextStyle(color: Colors.grey[900], fontSize: ScreenUtil().setSp(40, allowFontScalingSelf: true))),
+            style: TextStyle(
+                color: Colors.grey[900],
+                fontSize: ScreenUtil().setSp(40, allowFontScalingSelf: true))),
       ),
       body: ListView(
         children: <Widget>[
@@ -49,8 +55,14 @@ class DetailsCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text('NR PRZESYŁKI',
-                            style: GreyStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true)), textAlign: TextAlign.left),
-                        Text('6547360387456803476863', style: BlackBoldStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
+                            style: GreyStyle.copyWith(
+                                fontSize: ScreenUtil()
+                                    .setSp(27, allowFontScalingSelf: true)),
+                            textAlign: TextAlign.left),
+                        Text('76574775476475674567564754',
+                            style: BlackBoldStyle.copyWith(
+                                fontSize: ScreenUtil()
+                                    .setSp(27, allowFontScalingSelf: true))),
                       ]),
                   Icon(Icons.blur_linear),
                 ]),
@@ -60,8 +72,14 @@ class DetailsCard extends StatelessWidget {
                   Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Text('STATUS', style: GreyStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
-                        Text('W trakcie przygotowania', style: BlackBoldStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
+                        Text('STATUS',
+                            style: GreyStyle.copyWith(
+                                fontSize: ScreenUtil()
+                                    .setSp(27, allowFontScalingSelf: true))),
+                        Text('W trakcie przygotowania',
+                            style: BlackBoldStyle.copyWith(
+                                fontSize: ScreenUtil()
+                                    .setSp(27, allowFontScalingSelf: true))),
                       ]),
                 ]),
             Row(
@@ -70,8 +88,14 @@ class DetailsCard extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text('NADAWCA', style: GreyStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
-                      Text('Katarzyna Głodowska', style: BlackBoldStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
+                      Text('NADAWCA',
+                          style: GreyStyle.copyWith(
+                              fontSize: ScreenUtil()
+                                  .setSp(27, allowFontScalingSelf: true))),
+                      Text('Jan Kowalski',
+                          style: BlackBoldStyle.copyWith(
+                              fontSize: ScreenUtil()
+                                  .setSp(27, allowFontScalingSelf: true))),
                     ],
                   ),
                 ]),
@@ -81,8 +105,14 @@ class DetailsCard extends StatelessWidget {
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
-                      Text('NAZWA PRZESYŁKI', style: GreyStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
-                      Text('Parasole', style: BlackBoldStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true))),
+                      Text('NAZWA PRZESYŁKI',
+                          style: GreyStyle.copyWith(
+                              fontSize: ScreenUtil()
+                                  .setSp(27, allowFontScalingSelf: true))),
+                      Text('Buty',
+                          style: BlackBoldStyle.copyWith(
+                              fontSize: ScreenUtil()
+                                  .setSp(27, allowFontScalingSelf: true))),
                     ],
                   ),
                 ]),
@@ -99,7 +129,9 @@ class DetailsCard extends StatelessWidget {
                 color: Colors.purple,
                 child: Text(
                   'Udostępnij przesyłkę do obserwowania',
-                  style: BlackBoldStyle.copyWith(fontSize: ScreenUtil().setSp(27, allowFontScalingSelf: true)),
+                  style: BlackBoldStyle.copyWith(
+                      fontSize:
+                          ScreenUtil().setSp(27, allowFontScalingSelf: true)),
                 ),
               ),
             ),
